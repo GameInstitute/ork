@@ -39,7 +39,7 @@
  * Main authors: Eric Bruneton, Antoine Begault, Guillaume Piolat.
  */
 
-#include <pthread.h>
+#include <mutex>
 
 #include "ork/scenegraph/ShowLogTask.h"
 
@@ -165,9 +165,8 @@ public:
     {
         if (next != NULL) {
             if (next->hasTopic(topic)) {
-                pthread_mutex_lock((pthread_mutex_t*) mutex);
+				std::lock_guard<std::mutex> locker(mutex);
                 buf->addText(type, "[" + topic + "] " + msg + '\n');
-                pthread_mutex_unlock((pthread_mutex_t*) mutex);
             }
             next->log(topic, msg);
         }

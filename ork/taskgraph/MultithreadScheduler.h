@@ -27,6 +27,9 @@
 #include <vector>
 #include <set>
 #include <sstream>
+#include <mutex>
+#include <thread>
+#include <condition_variable>
 #include "ork/taskgraph/Scheduler.h"
 #include "ork/taskgraph/TaskGraph.h"
 
@@ -142,24 +145,24 @@ private:
      * A mutex used to ensure consistent access to the data structures of this
      * scheduler from the various execution threads.
      */
-    void* mutex;
+    std::recursive_mutex mutex;
 
     /**
      * A condition to signal to execution threads that new tasks are ready to be
      * executed.
      */
-    void* allTasksCond;
+    std::condition_variable_any allTasksCond;
 
     /**
      * A condition to signal to execution threads that new CPU tasks are ready
      * to be executed.
      */
-    void* cpuTasksCond;
+	std::condition_variable_any cpuTasksCond;
 
     /**
      * The threads used to execute tasks, in addition to the main thread.
      */
-    std::vector<void*> threads;
+    std::vector<std::thread> threads;
 
     /**
      * Target frame duration in micro seconds, or 0 if no fixed framerate.
@@ -321,7 +324,7 @@ private:
      *
      * @param arg a MultithreadScheduler.
      */
-    static void* schedulerThread(void* arg);
+    static int schedulerThread(void* arg);
 
     /**
      * Returns a tasks from the given set with, if possible, the same execution

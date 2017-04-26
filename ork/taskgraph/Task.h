@@ -46,6 +46,7 @@
 #include <vector>
 #include <map>
 #include <set>
+#include <mutex>
 
 #include "ork/core/Object.h"
 
@@ -314,7 +315,7 @@ private:
 
     float expectedDuration; ///< expected duration of this task.
 
-    static void* mutex; ///< mutex used to synchronize accesses to #statistics
+    static std::mutex mutex; ///< mutex used to synchronize accesses to #statistics
 
     /**
      * The execution time statistics for each task type. Maps TaskStatistics to

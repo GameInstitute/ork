@@ -49,61 +49,57 @@
 
 #include <string.h>
 
-#ifndef CALLBACK
-#define CALLBACK
-#endif
-
 using namespace std;
 
 namespace ork
 {
 
-void CALLBACK debugCallback(unsigned int source, unsigned int type,
+void GLAPIENTRY debugCallback(unsigned int source, unsigned int type,
     unsigned int id, unsigned int severity,
     int length, const char* message, const void* userParam)
 {
     char debSource[16];
     switch (source) {
     case GL_DEBUG_SOURCE_API_ARB:
-        strcpy(debSource, "OPENGL");
+        strcpy_s(debSource, "OPENGL");
         break;
     case GL_DEBUG_SOURCE_WINDOW_SYSTEM_ARB:
-        strcpy(debSource, "WINDOWS");
+		strcpy_s(debSource, "WINDOWS");
         break;
     case GL_DEBUG_SOURCE_SHADER_COMPILER_ARB:
-        strcpy(debSource, "COMPILER");
+		strcpy_s(debSource, "COMPILER");
         break;
     case GL_DEBUG_SOURCE_THIRD_PARTY_ARB:
-        strcpy(debSource, "LIBRARY");
+		strcpy_s(debSource, "LIBRARY");
         break;
     case GL_DEBUG_SOURCE_APPLICATION_ARB:
-        strcpy(debSource, "APPLICATION");
+		strcpy_s(debSource, "APPLICATION");
         break;
     //case GL_DEBUG_SOURCE_OTHER_ARB:
     default:
-        strcpy(debSource, "UNKNOWN");
+		strcpy_s(debSource, "UNKNOWN");
     }
 
     char debType[20];
     switch (type) {
     case GL_DEBUG_TYPE_ERROR_ARB:
-        strcpy(debType, "Error");
+		strcpy_s(debType, "Error");
         break;
     case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR_ARB:
-        strcpy(debType, "Deprecated behavior");
+		strcpy_s(debType, "Deprecated behavior");
         break;
     case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR_ARB:
-        strcpy(debType, "Undefined behavior");
+		strcpy_s(debType, "Undefined behavior");
         break;
     case GL_DEBUG_TYPE_PORTABILITY_ARB:
-        strcpy(debType, "Portability");
+		strcpy_s(debType, "Portability");
         break;
     case GL_DEBUG_TYPE_PERFORMANCE_ARB:
-        strcpy(debType, "Performance");
+		strcpy_s(debType, "Performance");
         break;
     //case GL_DEBUG_TYPE_OTHER_ARB:
     default:
-        strcpy(debType, "Other");
+        strcpy_s(debType, "Other");
     }
 
     if (severity == GL_DEBUG_SEVERITY_HIGH_ARB && Logger::ERROR_LOGGER != NULL) {

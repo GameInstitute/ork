@@ -44,6 +44,7 @@
 
 #include <string>
 #include "ork/core/Object.h"
+#include <mutex>
 
 namespace ork
 {
@@ -140,7 +141,7 @@ protected:
     /**
      * A mutex to access this logger from multiple threads.
      */
-    void *mutex;
+    std::mutex mutex;
 };
 
 }

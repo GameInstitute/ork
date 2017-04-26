@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{a4b33358-bd8a-417a-afe2-ec8c5cad231e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\math">
+      <UniqueIdentifier>{778922b2-033b-41f5-899b-64f3fd589814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\render">
+      <UniqueIdentifier>{d8a896b9-4f00-42c6-950a-4370f25e7604}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\resource">
+      <UniqueIdentifier>{00227108-b3af-4de5-98cb-4aa842e58e91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\scenegraph">
+      <UniqueIdentifier>{f1264b05-c944-4c0e-a14a-23d15e2ff5e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\taskgraph">
+      <UniqueIdentifier>{9c1d0f3e-d7b8-4e26-8ebb-5e009c91d2cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui">
+      <UniqueIdentifier>{4b77814d-2a16-45dc-87e9-e9e7b647102b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{20f68d25-5986-470e-a7b3-95d35bab9b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{49ac9e10-6902-4f64-a9da-eda9238e1d3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{19b2a8d6-0a0f-4515-9c00-7b584632b5e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render">
+      <UniqueIdentifier>{543ae20e-db42-4477-884a-4c7d89e74adc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\resource">
+      <UniqueIdentifier>{3d4b47c5-05ff-4a25-9bd7-654e02061b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scenegraph">
+      <UniqueIdentifier>{e7360947-1fde-4145-80df-9540becb85a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\taskgraph">
+      <UniqueIdentifier>{c2504bb2-377b-4fbb-9d43-f2431c47e189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui">
+      <UniqueIdentifier>{b7d1637d-dd45-4048-a13e-dd2503f9654c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{5b506aae-7bb4-4a07-aa46-f8b794e8e457}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\FileLogger.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\GPUTimer.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Logger.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Object.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Timer.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="math\half.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="render\AttributeBuffer.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Buffer.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\CPUBuffer.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\FrameBuffer.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\GPUBuffer.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\MeshBuffers.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Module.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Program.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\RenderBuffer.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Sampler.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Texture.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Texture1D.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Texture1DArray.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Texture2D.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Texture2DArray.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Texture2DMultisample.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Texture2DMultisampleArray.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Texture3D.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\TextureBuffer.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\TextureCube.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\TextureCubeArray.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\TextureRectangle.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\TransformFeedback.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Types.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Uniform.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Value.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\CompiledResourceLoader.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\Resource.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\ResourceCompiler.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\ResourceDescriptor.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\ResourceFactory.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\ResourceLoader.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\ResourceManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\XMLResourceLoader.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\AbstractTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\CallMethodTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\DrawMeshTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\Method.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\LoopTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\SceneManager.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\SceneNode.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\SequenceTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\SetProgramTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\SetStateTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\SetTargetTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\SetTransformsTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\ShowInfoTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="scenegraph\ShowLogTask.cpp">
+      <Filter>Source Files\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="taskgraph\MultithreadScheduler.cpp">
+      <Filter>Source Files\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="taskgraph\Scheduler.cpp">
+      <Filter>Source Files\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="taskgraph\Task.cpp">
+      <Filter>Source Files\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="taskgraph\TaskFactory.cpp">
+      <Filter>Source Files\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="taskgraph\TaskGraph.cpp">
+      <Filter>Source Files\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Query.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\DebugCallback.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\EventHandler.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\GlfwWindow.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\GlutWindow.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\Window.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="util\Font.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\Atomic.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Factory.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\FileLogger.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\GPUTimer.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Iterator.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Logger.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Object.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Timer.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="math\box2.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\box3.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\half.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\mat2.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\mat3.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\mat4.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\quat.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\vec2.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\vec3.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\vec4.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="render\AttributeBuffer.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Buffer.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\CPUBuffer.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\FrameBuffer.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\GPUBuffer.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Mesh.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\MeshBuffers.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Module.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Program.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Query.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\RenderBuffer.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Sampler.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Texture.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Texture1D.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Texture1DArray.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Texture2D.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Texture2DArray.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Texture2DMultisample.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Texture2DMultisampleArray.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Texture3D.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\TextureBuffer.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\TextureCube.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\TextureCubeArray.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\TextureRectangle.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\TransformFeedback.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Types.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Uniform.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Value.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\CompiledResourceLoader.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\Resource.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\ResourceCompiler.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\ResourceDescriptor.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\ResourceFactory.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\ResourceLoader.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\ResourceManager.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\ResourceTemplate.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\XMLResourceLoader.h">
+      <Filter>Header Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\AbstractTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\CallMethodTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\DrawMeshTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\LoopTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\Method.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\SceneManager.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\SceneNode.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\SequenceTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\SetProgramTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\SetStateTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\SetTargetTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\SetTransformsTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\ShowInfoTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="scenegraph\ShowLogTask.h">
+      <Filter>Header Files\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="taskgraph\MultithreadScheduler.h">
+      <Filter>Header Files\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="taskgraph\Scheduler.h">
+      <Filter>Header Files\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="taskgraph\Task.h">
+      <Filter>Header Files\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="taskgraph\TaskFactory.h">
+      <Filter>Header Files\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="taskgraph\TaskGraph.h">
+      <Filter>Header Files\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\DebugCallback.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\EventHandler.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\GlfwWindow.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\GlutWindow.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\Window.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Font.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

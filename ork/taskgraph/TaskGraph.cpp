@@ -40,6 +40,7 @@
  */
 
 #include "ork/taskgraph/TaskGraph.h"
+#include <algorithm>
 
 using namespace std;
 

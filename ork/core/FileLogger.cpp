@@ -40,10 +40,10 @@
  */
 
 #include "ork/core/FileLogger.h"
+#include <algorithm>
 
 #include <ctime>
 
-#include <pthread.h>
 #include <string.h>
 
 using namespace std;
@@ -134,7 +134,7 @@ void FileLogger::log(const string &topic, const string &msg)
         strftime(timestring, 256, "%H:%M:%S", timeinfo);
 #endif
 
-        pthread_mutex_lock((pthread_mutex_t*) mutex);
+		std::lock_guard<std::mutex> locker(mutex);
         fstream &o = out->stream;
         o << "<tr><td class=\"DATE\">" << timestring << "</td>\n";
         o << "<td class=\"" << type << "\">[" << topic << "] ";
@@ -158,7 +158,6 @@ void FileLogger::log(const string &topic, const string &msg)
         }
         o << "</td></tr>\n";
         o.flush();
-        pthread_mutex_unlock((pthread_mutex_t*) mutex);
     }
 
     if (next != NULL) {

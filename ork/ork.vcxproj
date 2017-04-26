@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{0BE6AF74-3794-4FD5-919B-11411F63F533}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)libraries;$(SolutionDir)thirdparty\include;$(SolutionDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)thirdparty\lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)libraries;$(SolutionDir)thirdparty\include;$(SolutionDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)thirdparty\lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)libraries;$(SolutionDir)thirdparty\include;$(SolutionDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)thirdparty\lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)libraries;$(SolutionDir)thirdparty\include;$(SolutionDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)thirdparty\lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>ORK_API=__declspec(dllexport);TIXML_USE_STL;USEFREEGLUT;USE_SHARED_PTR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>glew32.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>ORK_API=__declspec(dllexport);TIXML_USE_STL;USEFREEGLUT;USE_SHARED_PTR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>ORK_API=__declspec(dllexport);TIXML_USE_STL;USEFREEGLUT;USE_SHARED_PTR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glew32.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>ORK_API=__declspec(dllexport);TIXML_USE_STL;USEFREEGLUT;USE_SHARED_PTR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glew32.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="core\FileLogger.cpp" />
+    <ClCompile Include="core\GPUTimer.cpp" />
+    <ClCompile Include="core\Logger.cpp" />
+    <ClCompile Include="core\Object.cpp" />
+    <ClCompile Include="core\Timer.cpp" />
+    <ClCompile Include="math\half.cpp" />
+    <ClCompile Include="render\AttributeBuffer.cpp" />
+    <ClCompile Include="render\Buffer.cpp" />
+    <ClCompile Include="render\CPUBuffer.cpp" />
+    <ClCompile Include="render\FrameBuffer.cpp" />
+    <ClCompile Include="render\GPUBuffer.cpp" />
+    <ClCompile Include="render\MeshBuffers.cpp" />
+    <ClCompile Include="render\Module.cpp" />
+    <ClCompile Include="render\Program.cpp" />
+    <ClCompile Include="render\Query.cpp" />
+    <ClCompile Include="render\RenderBuffer.cpp" />
+    <ClCompile Include="render\Sampler.cpp" />
+    <ClCompile Include="render\Texture.cpp" />
+    <ClCompile Include="render\Texture1D.cpp" />
+    <ClCompile Include="render\Texture1DArray.cpp" />
+    <ClCompile Include="render\Texture2D.cpp" />
+    <ClCompile Include="render\Texture2DArray.cpp" />
+    <ClCompile Include="render\Texture2DMultisample.cpp" />
+    <ClCompile Include="render\Texture2DMultisampleArray.cpp" />
+    <ClCompile Include="render\Texture3D.cpp" />
+    <ClCompile Include="render\TextureBuffer.cpp" />
+    <ClCompile Include="render\TextureCube.cpp" />
+    <ClCompile Include="render\TextureCubeArray.cpp" />
+    <ClCompile Include="render\TextureRectangle.cpp" />
+    <ClCompile Include="render\TransformFeedback.cpp" />
+    <ClCompile Include="render\Types.cpp" />
+    <ClCompile Include="render\Uniform.cpp" />
+    <ClCompile Include="render\Value.cpp" />
+    <ClCompile Include="resource\CompiledResourceLoader.cpp" />
+    <ClCompile Include="resource\Resource.cpp" />
+    <ClCompile Include="resource\ResourceCompiler.cpp" />
+    <ClCompile Include="resource\ResourceDescriptor.cpp" />
+    <ClCompile Include="resource\ResourceFactory.cpp" />
+    <ClCompile Include="resource\ResourceLoader.cpp" />
+    <ClCompile Include="resource\ResourceManager.cpp" />
+    <ClCompile Include="resource\XMLResourceLoader.cpp" />
+    <ClCompile Include="scenegraph\AbstractTask.cpp" />
+    <ClCompile Include="scenegraph\CallMethodTask.cpp" />
+    <ClCompile Include="scenegraph\DrawMeshTask.cpp" />
+    <ClCompile Include="scenegraph\LoopTask.cpp" />
+    <ClCompile Include="scenegraph\Method.cpp" />
+    <ClCompile Include="scenegraph\SceneManager.cpp" />
+    <ClCompile Include="scenegraph\SceneNode.cpp" />
+    <ClCompile Include="scenegraph\SequenceTask.cpp" />
+    <ClCompile Include="scenegraph\SetProgramTask.cpp" />
+    <ClCompile Include="scenegraph\SetStateTask.cpp" />
+    <ClCompile Include="scenegraph\SetTargetTask.cpp" />
+    <ClCompile Include="scenegraph\SetTransformsTask.cpp" />
+    <ClCompile Include="scenegraph\ShowInfoTask.cpp" />
+    <ClCompile Include="scenegraph\ShowLogTask.cpp" />
+    <ClCompile Include="taskgraph\MultithreadScheduler.cpp" />
+    <ClCompile Include="taskgraph\Scheduler.cpp" />
+    <ClCompile Include="taskgraph\Task.cpp" />
+    <ClCompile Include="taskgraph\TaskFactory.cpp" />
+    <ClCompile Include="taskgraph\TaskGraph.cpp" />
+    <ClCompile Include="ui\DebugCallback.cpp" />
+    <ClCompile Include="ui\EventHandler.cpp" />
+    <ClCompile Include="ui\GlfwWindow.cpp" />
+    <ClCompile Include="ui\GlutWindow.cpp" />
+    <ClCompile Include="ui\Window.cpp" />
+    <ClCompile Include="util\Font.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\Atomic.h" />
+    <ClInclude Include="core\Factory.h" />
+    <ClInclude Include="core\FileLogger.h" />
+    <ClInclude Include="core\GPUTimer.h" />
+    <ClInclude Include="core\Iterator.h" />
+    <ClInclude Include="core\Logger.h" />
+    <ClInclude Include="core\Object.h" />
+    <ClInclude Include="core\Timer.h" />
+    <ClInclude Include="math\box2.h" />
+    <ClInclude Include="math\box3.h" />
+    <ClInclude Include="math\half.h" />
+    <ClInclude Include="math\mat2.h" />
+    <ClInclude Include="math\mat3.h" />
+    <ClInclude Include="math\mat4.h" />
+    <ClInclude Include="math\quat.h" />
+    <ClInclude Include="math\vec2.h" />
+    <ClInclude Include="math\vec3.h" />
+    <ClInclude Include="math\vec4.h" />
+    <ClInclude Include="render\AttributeBuffer.h" />
+    <ClInclude Include="render\Buffer.h" />
+    <ClInclude Include="render\CPUBuffer.h" />
+    <ClInclude Include="render\FrameBuffer.h" />
+    <ClInclude Include="render\GPUBuffer.h" />
+    <ClInclude Include="render\Mesh.h" />
+    <ClInclude Include="render\MeshBuffers.h" />
+    <ClInclude Include="render\Module.h" />
+    <ClInclude Include="render\Program.h" />
+    <ClInclude Include="render\Query.h" />
+    <ClInclude Include="render\RenderBuffer.h" />
+    <ClInclude Include="render\Sampler.h" />
+    <ClInclude Include="render\Texture.h" />
+    <ClInclude Include="render\Texture1D.h" />
+    <ClInclude Include="render\Texture1DArray.h" />
+    <ClInclude Include="render\Texture2D.h" />
+    <ClInclude Include="render\Texture2DArray.h" />
+    <ClInclude Include="render\Texture2DMultisample.h" />
+    <ClInclude Include="render\Texture2DMultisampleArray.h" />
+    <ClInclude Include="render\Texture3D.h" />
+    <ClInclude Include="render\TextureBuffer.h" />
+    <ClInclude Include="render\TextureCube.h" />
+    <ClInclude Include="render\TextureCubeArray.h" />
+    <ClInclude Include="render\TextureRectangle.h" />
+    <ClInclude Include="render\TransformFeedback.h" />
+    <ClInclude Include="render\Types.h" />
+    <ClInclude Include="render\Uniform.h" />
+    <ClInclude Include="render\Value.h" />
+    <ClInclude Include="resource\CompiledResourceLoader.h" />
+    <ClInclude Include="resource\Resource.h" />
+    <ClInclude Include="resource\ResourceCompiler.h" />
+    <ClInclude Include="resource\ResourceDescriptor.h" />
+    <ClInclude Include="resource\ResourceFactory.h" />
+    <ClInclude Include="resource\ResourceLoader.h" />
+    <ClInclude Include="resource\ResourceManager.h" />
+    <ClInclude Include="resource\ResourceTemplate.h" />
+    <ClInclude Include="resource\XMLResourceLoader.h" />
+    <ClInclude Include="scenegraph\AbstractTask.h" />
+    <ClInclude Include="scenegraph\CallMethodTask.h" />
+    <ClInclude Include="scenegraph\DrawMeshTask.h" />
+    <ClInclude Include="scenegraph\LoopTask.h" />
+    <ClInclude Include="scenegraph\Method.h" />
+    <ClInclude Include="scenegraph\SceneManager.h" />
+    <ClInclude Include="scenegraph\SceneNode.h" />
+    <ClInclude Include="scenegraph\SequenceTask.h" />
+    <ClInclude Include="scenegraph\SetProgramTask.h" />
+    <ClInclude Include="scenegraph\SetStateTask.h" />
+    <ClInclude Include="scenegraph\SetTargetTask.h" />
+    <ClInclude Include="scenegraph\SetTransformsTask.h" />
+    <ClInclude Include="scenegraph\ShowInfoTask.h" />
+    <ClInclude Include="scenegraph\ShowLogTask.h" />
+    <ClInclude Include="taskgraph\MultithreadScheduler.h" />
+    <ClInclude Include="taskgraph\Scheduler.h" />
+    <ClInclude Include="taskgraph\Task.h" />
+    <ClInclude Include="taskgraph\TaskFactory.h" />
+    <ClInclude Include="taskgraph\TaskGraph.h" />
+    <ClInclude Include="ui\DebugCallback.h" />
+    <ClInclude Include="ui\EventHandler.h" />
+    <ClInclude Include="ui\GlfwWindow.h" />
+    <ClInclude Include="ui\GlutWindow.h" />
+    <ClInclude Include="ui\Window.h" />
+    <ClInclude Include="util\Font.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libraries\stbi\stbi.vcxproj">
+      <Project>{bad8481f-f4f1-4b93-bb20-d56814f6ac12}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libraries\tinyxml\tinyxml.vcxproj">
+      <Project>{d2c396d1-91b7-484f-8b10-7fb6027817f0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

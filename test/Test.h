@@ -42,6 +42,7 @@
 #ifndef _ORK_TEST_
 #define _ORK_TEST_
 
+#include <ork\ork.h>
 #include <string>
 #include <vector>
 
